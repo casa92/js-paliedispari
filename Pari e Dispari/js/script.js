@@ -46,43 +46,30 @@ while ( userChoice === false ) {
     }
 }
 
-
-console.log(evenOrOddResult)
-
-// if (userChoice !== even && userChoice !== odd) {
-//     prompt('puoi digitare solo "pari" o "dispari"');
-// }
-
-
-// do {
-//     let even = 'pari'
-//     userChoice = prompt( 'scegli pari o dispari' );
-    
-//     console.log(userChoice)
-//     // if ( userChoice === 'pari') {
-//     //     evenOrOddUserChoice = 'pari';
-//     // } else {
-//     //     evenOrOddUserChoice = 'dispari';
-//     // }
-// } while ( userChoice === 'pari' || userChoice === 'dispari' );
-
-console.log(userChoice);
-// console.log(evenOrOddUserChoice);
-
-
 //genero numero casuale del computer
 let computerNumber = getRndInteger(1, 5);
 
+//sommo i due numeri
 let finalSum = numberSum( userNumber, computerNumber );
 console.log(finalSum)
 
+//verifico se il risultato della somma è pari o dispari
 let finalSumIsEvenOrOdd = numberIsEvenOrOdd( finalSum );
 console.log(finalSumIsEvenOrOdd);
 
+//verifico se coincide o meno con la scelta dell'utente
+let winnerOrLoser;
+if ( evenOrOddResult === finalSumIsEvenOrOdd ) {
+    winnerOrLoser = 'sei il vincitore';
+} else {
+    winnerOrLoser = 'il vincitore è il computer';
+}
+
+//stampo messaggio all'utente
 let userMessage = `
 Il numero che hai inserito è ${userNumber}.
 Quello del computer è ${computerNumber}.
-Dato che la somma è ${finalSum}, il vincitore è 
+Dato che la somma è ${finalSum} e la tua scelta iniziziale è stata ${evenOrOddResult}, ${winnerOrLoser}!
 `;
 
 alert(userMessage);
