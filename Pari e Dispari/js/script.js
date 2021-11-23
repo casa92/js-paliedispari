@@ -11,8 +11,7 @@ do {
     userNumber = parseInt( prompt( 'Inerisci un nemro compreso tra 1 e 5' ));
 } while ( userNumber <= 0 || userNumber > 5 || isNaN(userNumber));
 
-
-let evenOrOddUserChoice;
+//chiedere ad utente di scegliere pari o dispari
 let userChoiceInput = prompt( 'scegli pari o dispari' );
 
 let userChoice = userChoiceInput.toLowerCase();
@@ -20,6 +19,7 @@ let even = 'pari';
 let odd = 'dispari';
 let evenOrOddResult;
 
+//verifico che l'utente inserisca solo 'pari' o dispari', altrimenti continua in loop
 if (userChoice === even) {
     userChoice = true;
     evenOrOddResult = 'pari'
@@ -47,20 +47,16 @@ while ( userChoice === false ) {
     }
 }
 
-
-
-
-
 //genero numero casuale del computer
 let computerNumber = getRndInteger(1, 5);
 
 //sommo i due numeri
 let finalSum = numberSum( userNumber, computerNumber );
-console.log(finalSum)
+
 
 //verifico se il risultato della somma è pari o dispari
 let finalSumIsEvenOrOdd = numberIsEvenOrOdd( finalSum );
-console.log(finalSumIsEvenOrOdd);
+
 
 //verifico se coincide o meno con la scelta dell'utente
 let winnerOrLoser;
