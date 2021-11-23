@@ -14,6 +14,7 @@ do {
 
 let evenOrOddUserChoice;
 let userChoiceInput = prompt( 'scegli pari o dispari' );
+
 let userChoice = userChoiceInput.toLowerCase();
 let even = 'pari';
 let odd = 'dispari';
@@ -45,6 +46,10 @@ while ( userChoice === false ) {
         userChoice = false;
     }
 }
+
+
+
+
 
 //genero numero casuale del computer
 let computerNumber = getRndInteger(1, 5);
